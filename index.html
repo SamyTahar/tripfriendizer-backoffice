@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <script src="../tripfriendizer-backoffice/lib/angular.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+<head>
+<body>
+
+<div ng-app="villaSignIn">
+    <form ng-controller="villaSignInCtrl">
+        <label>Villa's name(*) <input type="text" ng-model="villaName" required></label><br/>
+        <label>Villa owner(*) <input type="text" ng-model="villaOwner" required></label>
+
+        <p>(*)Must be filled. Min 5 char.</p>
+        <input type="submit" ng-click="checkData()" value="SignIn">
+    </form>
+</div>
+
+
+</body>
+
+</html>
