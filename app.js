@@ -26,7 +26,7 @@ app.controller('villaSignInCtrl', ['$scope', function ($scope) {
         }
         else
         {
-            alert("Fill all the gaps !");
+            alert("Fill all the gaps!");
         }
 
     };

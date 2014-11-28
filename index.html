@@ -13,12 +13,12 @@
 <div ng-app="villaSignIn">
     <form ng-controller="villaSignInCtrl">
         <!-- Info about owner -->
-        <label>Villa owner(*) <input type="text" ng-model="villaOwner" required></label><br/>
+        <label>Villa owner(*)  <input type="text" ng-model="villaOwner" required></label><br/>
 
         <!-- Info about Villa -->
-        <label>Villa's name(*) <input type="text" ng-model="villaName" required></label><br/>
+        <label>Villa's name(*)  <input type="text" ng-model="villaName" required></label><br/>
 
-        <label>Tag (Min 3 letters)<input type="text" ng-model="villaTag"> <input type="button" ng-click="addTag()" value="Add tag"></label><br/>
+        <label>Tag (Min 3 letters)  <input type="text" ng-model="villaTag"> <input type="button" ng-click="addTag()" value="Add tag"></label><br/>
         <div ng-repeat="Tag in tag">
             {{Tag.name}} <input type="button" ng-click="deleteTag(Tag)" value="Delete">
         </div>
