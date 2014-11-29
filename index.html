@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>test</title>
-    <script src="../tripfriendizer-backoffice/lib/angular.js"></script>
+    <script src="lib/angular-file-upload-shim.js"></script>
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-file-upload.js"></script>
     <script src="app.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 <head>
@@ -13,7 +15,18 @@
 <div ng-app="villaSignIn">
     <form ng-controller="villaSignInCtrl">
         <!-- Info about owner -->
-        <label>Villa owner(*)  <input type="text" ng-model="villaOwner" required></label><br/>
+        <label>Villa owner(*)
+            <input type="text" ng-model="villaOwnerName" required><br/>
+        </label>
+        </form>
+    <form ng-controller="ImageCtrl">
+
+        <div ng-show="dropSupported" class="drop" ng-file-drop="onFileSelect($files)" ng-file-drop-available="dropSupported=true"
+             ng-file-drag-over-class="dragOverClass($event)" ng-file-drag-over-delay="100" ng-file-select="onFileSelect($files)"
+             multiple accept="image/*">click or drop files here</div>
+        </form>
+
+    <form ng-controller="villaSignInCtrl">
 
         <!-- Info about Villa -->
         <label>Villa's name(*)  <input type="text" ng-model="villaName" required></label><br/>

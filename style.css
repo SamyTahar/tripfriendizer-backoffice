@@ -2,4 +2,12 @@ body {
     margin-left: 10%;
     margin-right: 10%;
     text-align: center;
+    display: block;
+}
+.drop
+{
+    padding-top: 20px;
+    background: #59f0ff;
+    border: 5px dashed #DDD;
+    text-align: center;
 }
